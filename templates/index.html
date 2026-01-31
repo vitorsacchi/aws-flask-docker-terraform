@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>API Flask + Logs 🚀</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Minha API Flask + Logs</h1>
+
+  <div class="card">
+    <p id="message">Clique no botão para testar a API</p>
+    <button onclick="getMessage()">Testar API</button>
+  </div>
+
+  <div class="card">
+    <h2>Minhas Tarefas</h2>
+    <ul id="tasks"></ul>
+    <button onclick="getTasks()">Carregar tarefas</button>
+  </div>
+
+  <div class="card">
+    <h2>Status do Sistema</h2>
+    <p id="cpu">CPU: --%</p>
+    <p id="mem">Memória: --%</p>
+    <button onclick="getLogs()">Atualizar Logs</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
